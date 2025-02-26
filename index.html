@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECTOME - Web ve výstavbě</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigace -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <img src="images/tectomelogo.png" alt="Logo" class="logo2" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Domů</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">O Nás</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Služby</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontakt">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hlavní obsah -->
+    <section
+      id="home"
+      class="home-section d-flex align-items-center justify-content-center"
+    >
+      <header class="text-center text-white py-5">
+        <div class="container">
+          <div class="logo-container">
+            <img
+              class="logo img-fluid"
+              src="images/tectome03.png"
+              alt="Logo TECTOME"
+            />
+          </div>
+          <h2 class="mt-4">
+            <span class="rekonstrukce">NA STRÁNCE SE PRACUJE !!</span>
+          </h2>
+          <p>Děkujeme za pochopení</p>
+          <div class="info">
+            <p>V případě potřeby nás kontaktujte na:</p>
+            <p>
+              <strong>+420 725 660 777</strong> nebo
+              <strong>info@tectome.cz</strong>
+            </p>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <!-- Kontakt / Formulář -->
+    <section id="kontakt" class="container my-5">
+      <h3 class="text-center">Kontaktujte nás</h3>
+      <form class="mx-auto mt-4" style="max-width: 500px">
+        <div class="formular">
+          <div class="mb-3">
+            <label for="name" class="form-label">Jméno</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Zpráva</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Odeslat</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footers">
+      <div class="container">
+        <div class="social-iconss">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://x.com/" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
