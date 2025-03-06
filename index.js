@@ -1,3 +1,27 @@
+// Efekt vypisování textu
+const text = "Váš technický partner v energetice";
+const typedTextElement = document.getElementById("typed-text");
+const cursorElement = document.getElementById("cursor");
+
+let index = 0;
+
+function typeText() {
+  if (index < text.length) {
+    typedTextElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeText, 100);
+  } else {
+    if (cursorElement) {
+      cursorElement.remove(); 
+    }
+    typedTextElement.classList.add("done"); 
+  }
+}
+
+window.onload = function () {
+  typeText();
+};
+
 // Efekt přechodů mezi sekcemi
 function revealSections() {
   let sections = document.querySelectorAll("section");
@@ -11,7 +35,7 @@ function revealSections() {
   });
 }
 
-// Zavření hamburger menu po kliknutí na odkaz
+// Zavření hamburger menu 
 document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
   link.addEventListener("click", () => {
     document.querySelector(".navbar-collapse").classList.remove("show");
