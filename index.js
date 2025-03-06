@@ -1,39 +1,49 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section");
-  const navCollapse = document.querySelector(".navbar-collapse");
+// Efekt přechodů mezi sekcemi
+function revealSections() {
+  let sections = document.querySelectorAll("section");
+  let windowHeight = window.innerHeight;
 
-  // Zavření navigace po kliknutí na odkaz (v mobilní verzi)
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      navLinks.forEach((nav) => nav.classList.remove("active"));
-      this.classList.add("active");
-
-      if (navCollapse.classList.contains("show")) {
-        navCollapse.classList.remove("show");
-      }
-    });
+  sections.forEach((section) => {
+    let position = section.getBoundingClientRect().top;
+    if (position < windowHeight - 100) {
+      section.classList.add("visible");
+    }
   });
+}
 
-  // Aktualizace aktivní sekce při scrollování
-  function changeActiveSection() {
-    let currentSection = "";
+// Zavření hamburger menu po kliknutí na odkaz
+document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.querySelector(".navbar-collapse").classList.remove("show");
+  });
+});
 
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 150;
-      if (window.scrollY >= sectionTop) {
-        currentSection = section.getAttribute("id");
-      }
-    });
+// Aktivní sekce v navigaci
+function highlightActiveSection() {
+  let sections = document.querySelectorAll("section");
+  let navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href").includes(currentSection)) {
-        link.classList.add("active");
-      }
-    });
-  }
+  sections.forEach((section, index) => {
+    let position = section.getBoundingClientRect().top;
+    if (
+      position < window.innerHeight / 2 &&
+      position > -window.innerHeight / 2
+    ) {
+      navLinks.forEach((link) => link.classList.remove("active"));
+      navLinks[index].classList.add("active");
+    }
+  });
+}
 
-  window.addEventListener("scroll", changeActiveSection);
-  changeActiveSection();
+window.addEventListener("scroll", () => {
+  revealSections();
+  highlightActiveSection();
+});
+revealSections();
+
+// Parallax efekt pro hero sekci
+window.addEventListener("scroll", () => {
+  const heroSection = document.querySelector(".hero-section");
+  const scrollPosition = window.scrollY;
+  heroSection.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
 });
