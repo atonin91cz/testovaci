@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TECTOME - Web ve výstavbě</title>
+    <meta name="format-detection" content="telephone=no" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -12,26 +12,34 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>TECTOME, s.r.o.</title>
   </head>
   <body>
     <!-- Navigace -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#home">
-          <img src="images/tectomelogo.png" alt="Logo" class="logo2" />
+          <img src="images/tectome03.png" alt="TECTOME Logo" class="logo" />
         </a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,70 +52,201 @@
               <a class="nav-link" href="#about">O Nás</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Služby</a>
+              <a class="nav-link" href="#services">Nabízíme</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#kontakt">Kontakt</a>
+              <a class="nav-link" href="#certifications">Certifikace</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#references">Reference</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontakt</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Hlavní obsah -->
-    <section
-      id="home"
-      class="home-section d-flex align-items-center justify-content-center"
-    >
-      <header class="text-center text-white py-5">
-        <div class="container">
-          <div class="logo-container">
-            <img
-              class="logo img-fluid"
-              src="images/tectome03.png"
-              alt="Logo TECTOME"
-            />
-          </div>
-          <h2 class="mt-4">
-            <span class="rekonstrukce">NA STRÁNCE SE PRACUJE !!</span>
-          </h2>
-          <p>Děkujeme za pochopení</p>
-          <div class="info">
-            <p>V případě potřeby nás kontaktujte na:</p>
-            <p>
-              <strong>+420 725 660 777</strong> nebo
-              <strong>info@tectome.cz</strong>
-            </p>
-          </div>
+    <!-- Hero sekce -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <img
+            src="images/tectome03.png"
+            alt="TECTOME Logo"
+            class="hero-logo"
+          />
+          <h1>TECTOME, s.r.o.</h1>
+          <p class="motto">Quality First</p>
+          <p class="intro-text">Váš technický partner v energetice</p>
         </div>
-      </header>
+      </div>
     </section>
 
-    <!-- Kontakt / Formulář -->
-    <section id="kontakt" class="container my-5">
-      <h3 class="text-center">Kontaktujte nás</h3>
-      <form class="mx-auto mt-4" style="max-width: 500px">
-        <div class="formular">
-          <div class="mb-3">
-            <label for="name" class="form-label">Jméno</label>
-            <input type="text" class="form-control" id="name" required />
+    <!-- Sekce O Nás -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>O Nás</h2>
+        <p>
+          Jsme nově vzniklá společnost, která cílí na zajímavé a významné
+          zakázky v oblasti stavebnictví a energetiky. Tyto zakázky umíme
+          realizovat na klíč nebo jsme schopni poskytnout kvalifikované manažery
+          k dovedení zakázek do úspěšného konce. Cílem je mít spokojené
+          investory, dodat dílo ve smluveném termínu a kvalitě, která již dnes
+          není standardem jiných dodavatelů a posouvat se správným směrem
+          kupředu a dál plnit velké výzvy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sekce Nabízíme -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2>Nabízíme</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="service-item h-100">
+              <h3>Výstavba inženýrských sítí</h3>
+              <img
+                src="images/obr01.jpg"
+                alt="Výstavba inženýrských sítí"
+                class="img-fluid service-image"
+              />
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required />
+          <div class="col-md-4 mb-4">
+            <div class="service-item h-100">
+              <h3>Inženýrská činnost ve výstavbě</h3>
+              <img
+                src="images/obr01.jpg"
+                alt="Inženýrská činnost"
+                class="img-fluid service-image"
+              />
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Zpráva</label>
-            <textarea
-              class="form-control"
-              id="message"
-              rows="4"
-              required
-            ></textarea>
+          <div class="col-md-4 mb-4">
+            <div class="service-item h-100">
+              <h3>Projekční činnost</h3>
+              <img
+                src="images/obr01.jpg"
+                alt="Projekční činnost"
+                class="img-fluid service-image"
+              />
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary w-100">Odeslat</button>
+          <div class="col-md-4 mb-4">
+            <div class="service-item h-100">
+              <h3>Technický dozor staveb</h3>
+              <img
+                src="images/obr01.jpg"
+                alt="Technický dozor"
+                class="img-fluid service-image"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="service-item h-100">
+              <h3>Výroba a montáž ocelových konstrukcí</h3>
+              <img
+                src="images/obr01.jpg"
+                alt="Ocelové konstrukce"
+                class="img-fluid service-image"
+              />
+            </div>
+          </div>
         </div>
-      </form>
+      </div>
+    </section>
+
+    <!-- Sekce Certifikace -->
+    <section id="certifications" class="certifications-section">
+      <div class="container">
+        <h2>Certifikace</h2>
+        <p>
+          Jsme certifikováni v rámci kvality a svařování ocelových konstrukcí:
+        </p>
+        <ul>
+          <li>ČSN EN 1090-2</li>
+          <li>ČSN EN 3834-2</li>
+        </ul>
+        <p>
+          Dále jsme držitelem certifikátu systému managementu kvality:
+          <strong>ISO 9001</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sekce Reference -->
+    <section id="references" class="references-section">
+      <div class="container">
+        <h2>Reference</h2>
+        <p>
+          Ač je naše společnost TECTOME teprve na začátku, pracují v ní velmi
+          kvalifikovaní lidé, kteří mají letité zkušenosti s výstavbou
+          inženýrských sítí, svařováním ocelových konstrukcí a vedením staveb.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sekce Kontakt -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="contact-person h-100">
+              <p><strong>Ing. Marek Tomeček</strong></p>
+              <p>tomecek@tectome.cz</p>
+              <p>Jednatel společnosti</p>
+              <p>725 660 777</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="contact-person h-100">
+              <p><strong>Ing. Petr Duchoň</strong></p>
+              <p>duchon@tectome.cz</p>
+              <p>Jednatel společnosti, výrobní ředitel</p>
+              <p>732 283 019</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-details">
+          <p><strong>Poptávky:</strong> poptavky@tectome.cz</p>
+          <p><strong>Fakturace:</strong> fakturace@tectome.cz</p>
+          <p><strong>IČO:</strong> 225 72 457</p>
+          <p><strong>DIČ:</strong> CZ 225 72 457</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontaktní formulář -->
+    <section id="kontakt" class="contact-form-section">
+      <div class="container">
+        <h3 class="text-center">Kontaktujte nás</h3>
+        <form class="mx-auto mt-4" style="max-width: 500px">
+          <div class="formular">
+            <div class="mb-3">
+              <label for="name" class="form-label">Jméno</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Zpráva</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Odeslat</button>
+          </div>
+        </form>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -127,6 +266,7 @@
       </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
   </body>
