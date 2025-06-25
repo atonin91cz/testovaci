@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#home">
-          <img src="images/tectome03.png" alt="TECTOME Logo" class="logo" />
+          <img src="images/hmm.png" alt="TECTOME Logo" class="logo" />
         </a>
         <button
           class="navbar-toggler"
@@ -66,41 +66,60 @@
     </nav>
 
     <!-- Hero sekce -->
-    <section id="about" class="hero-section">
+    <section id="home" class="hero-section">
       <div class="container">
         <div class="hero-content">
           <p class="intro-text floating-text">
             <span id="typed-text"></span><span id="cursor">|</span>
           </p>
-          <p class="intro-text2">
-            Jsme nově vzniklá společnost, která cílí na zajímavé a významné
-            zakázky v oblasti stavebnictví a energetiky. Tyto zakázky umíme
-            realizovat na klíč nebo jsme schopni poskytnout kvalifikované
-            manažery k dovedení zakázek do úspěšného konce. Cílem je mít
-            spokojené investory, dodat dílo ve smluveném termínu a kvalitě,
-            která již dnes není standardem jiných dodavatelů a posouvat se
-            správným směrem kupředu a dál plnit velké výzvy.
-          </p>
         </div>
       </div>
     </section>
+
+    <!-- Sekce O Nás -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>O NÁS</h2>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <p class="about-text">
+              Jsme nově vzniklá společnost, která cílí na zajímavé a významné
+              zakázky v oblasti stavebnictví a energetiky. Tyto zakázky umíme
+              realizovat na klíč nebo jsme schopni poskytnout kvalifikované
+              manažery k dovedení zakázek do úspěšného konce. Cílem je mít
+              spokojené investory, dodat dílo ve smluveném termínu, kvalitě a
+              posouvat se správným směrem kupředu a dál plnit velké výzvy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Sekce Nabízíme -->
     <section id="services" class="services-section">
       <div class="container">
-        <h2>Nabízíme</h2>
+        <h2>NABÍZÍME</h2>
         <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="service-item h-100">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div
+              class="service-item h-100"
+              data-bs-toggle="modal"
+              data-bs-target="#serviceModal1"
+            >
               <h3>Výstavba inženýrských sítí</h3>
               <img
-                src="images/obr01.jpg"
+                src="images/vystavba.jpg"
                 alt="Výstavba inženýrských sítí"
                 class="img-fluid service-image"
               />
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="service-item h-100">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div
+              class="service-item h-100"
+              data-bs-toggle="modal"
+              data-bs-target="#serviceModal2"
+            >
               <h3>Inženýrská činnost ve výstavbě</h3>
               <img
                 src="images/obr01.jpg"
@@ -109,31 +128,29 @@
               />
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="service-item h-100">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div
+              class="service-item h-100"
+              data-bs-toggle="modal"
+              data-bs-target="#serviceModal3"
+            >
               <h3>Projekční činnost</h3>
               <img
-                src="images/obr01.jpg"
+                src="images/cinost.jpg"
                 alt="Projekční činnost"
                 class="img-fluid service-image"
               />
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="service-item h-100">
-              <h3>Technický dozor staveb</h3>
-              <img
-                src="images/obr01.jpg"
-                alt="Technický dozor"
-                class="img-fluid service-image"
-              />
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="service-item h-100">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div
+              class="service-item h-100"
+              data-bs-toggle="modal"
+              data-bs-target="#serviceModal4"
+            >
               <h3>Výroba a montáž ocelových konstrukcí</h3>
               <img
-                src="images/obr01.jpg"
+                src="images/montaz.jpg"
                 alt="Ocelové konstrukce"
                 class="img-fluid service-image"
               />
@@ -143,40 +160,139 @@
       </div>
     </section>
 
+    <!-- Modální okna služeb -->
+    <div class="modal fade" id="serviceModal1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Výstavba inženýrských sítí</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="images/vystavba.jpg"
+              class="img-fluid modal-image"
+              alt="Výstavba inženýrských sítí"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="serviceModal2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Inženýrská činnost ve výstavbě</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="images/obr01.jpg"
+              class="img-fluid modal-image"
+              alt="Inženýrská činnost"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="serviceModal3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Projekční činnost</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="images/cinost.jpg"
+              class="img-fluid modal-image"
+              alt="Projekční činnost"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="serviceModal4" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Výroba a montáž ocelových konstrukcí</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="images/montaz.jpg"
+              class="img-fluid modal-image"
+              alt="Ocelové konstrukce"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Sekce Certifikace -->
     <section id="certifications" class="certifications-section">
       <div class="container">
-        <h2>Certifikace</h2>
-        <p>
-          Jsme certifikováni v rámci kvality a svařování ocelových konstrukcí:
-        </p>
-        <ul>
-          <li>ČSN EN 1090-2</li>
-          <li>ČSN EN 3834-2</li>
-        </ul>
-        <p>
-          Dále jsme držitelem certifikátu systému managementu kvality:
-          <strong>ISO 9001</strong>.
-        </p>
+        <h2>CERTIFIKACE TECTOME</h2>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <p>
+              Jsme certifikováni v rámci kvality a svařování ocelových
+              konstrukcí:
+            </p>
+            <ul class="certification-list">
+              <li>ČSN EN 1090-2</li>
+              <li>ČSN EN 3834-2</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Sekce Reference -->
     <section id="references" class="references-section">
       <div class="container">
-        <h2>Reference</h2>
-        <p>
-          Ač je naše společnost TECTOME teprve na začátku, pracují v ní velmi
-          kvalifikovaní lidé, kteří mají letité zkušenosti s výstavbou
-          inženýrských sítí, svařováním ocelových konstrukcí a vedením staveb.
-        </p>
+        <h2>REFERENCE</h2>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <p>
+              Ač je naše společnost TECTOME teprve na začátku, pracují v ní
+              velmi kvalifikovaní lidé, kteří mají letité zkušenosti s výstavbou
+              inženýrských sítí, svařováním ocelových konstrukcí a vedením
+              staveb.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Sekce Kontakt -->
     <section id="contact" class="contact-section">
       <div class="container">
-        <h2>Kontakt</h2>
+        <h2>KONTAKT</h2>
         <div class="row">
           <div class="col-md-6 mb-4">
             <div class="contact-person h-100">
@@ -196,16 +312,19 @@
           </div>
         </div>
         <div class="contact-details">
-          <p><strong>Poptávky:</strong> poptavky@tectome.cz</p>
+          <p><strong>Poptávky:</strong> info@tectome.cz</p>
           <p><strong>Fakturace:</strong> fakturace@tectome.cz</p>
           <p><strong>IČO:</strong> 225 72 457</p>
           <p><strong>DIČ:</strong> CZ 225 72 457</p>
+          <p>
+            <strong>Adresa:</strong> U Továren 999/31, 102 00 Praha Hostivař
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Kontaktní formulář -->
-    <section id="kontakt" class="contact-form-section">
+    <section class="contact-form-section">
       <div class="container">
         <h3 class="text-center">Kontaktujte nás</h3>
         <form class="mx-auto mt-4" style="max-width: 500px">
@@ -244,6 +363,9 @@
             ><i class="fab fa-instagram"></i
           ></a>
           <a href="https://x.com/" target="_blank"><i class="fab fa-x"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; 2025 TECTOME, s.r.o. Všechna práva vyhrazena.
         </div>
       </div>
     </footer>
